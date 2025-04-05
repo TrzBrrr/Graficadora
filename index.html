@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graficadora de Funciones</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Graficadora de Funciones</h1>
+    <label for="funcionInput">Función:</label>
+    <input type="text" id="funcionInput" placeholder="Ej: 2*x+1">
+    <div id="errorFuncion"></div>
+
+    <label for="dominioInput">Dominio (separado por comas):</label>
+    <input type="text" id="dominioInput" placeholder="Ej: -2,-1,0,1,2">
+
+    <label for="tipoRepresentacion">Tipo de representación:</label>
+    <select id="tipoRepresentacion">
+      <option value="cartesiana">Cartesiana</option>
+      <option value="sagital">Sagital (diagrama tipo Venn)</option>
+      <option value="tabla">Tabla de valores</option>
+    </select>
+
+    <button onclick="generarTabla()">Graficar</button>
+
+    <div id="resultadoAnalisis"></div>
+    <canvas id="grafico"></canvas>
+    <div id="procedimiento"></div>
+    <div id="tablaValores"></div>
+    <div id="graficoSagital">
+      <svg id="svgFlechas" width="600" height="300"></svg>
+      <div id="contenedorNodos"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
